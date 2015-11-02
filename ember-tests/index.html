@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Ember</title>
-    <link rel="stylesheet" href="../qunit/qunit.css">
-    <script src="../qunit/qunit.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.18.0.css">
+    <script src="http://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script src="/testem.js"></script>
 
     <script type="text/javascript">
@@ -25,7 +25,7 @@
     <script type="text/javascript">
       // Fallback to default jQuery
       if (jQueryVersion !== 'none' && !window.jQuery) {
-        loadScript('../jquery/jquery.js');
+        loadScript('http://code.jquery.com/jquery-1.11.1.js');
       }
       // Close the script tag to make sure document.write happens
     </script>
@@ -79,23 +79,23 @@
       var dist = QUnit.urlParams.dist;
 
       if (dist) {
-        loadScript('../ember.' + dist + '.js');
+        loadScript('./ember.' + dist + '.js');
       } else {
-        loadScript('../ember.debug.js');
+        loadScript('./ember.debug.js');
       }
     </script>
 
     <script>
-      loadScript('../ember-template-compiler.js');
+      loadScript('./ember-template-compiler.js');
     </script>
 
     <script>
       var prod = QUnit.urlParams.prod;
 
       if (prod) {
-        loadScript('../ember-tests.prod.js');
+        loadScript('./ember-tests.prod.js');
       } else {
-        loadScript('../ember-tests.js');
+        loadScript('./ember-tests.js');
       }
     </script>
 
