@@ -7,13 +7,13 @@ var distPath = path.join(__dirname, '../../dist');
 
 QUnit.module('ember-runtime.js');
 
-test('can be required', function(assert) {
+QUnit.test('can be required', function(assert) {
   var Ember = require(path.join(distPath, 'ember-runtime'));
 
   assert.ok(Ember.Object, 'Ember.Object is present');
 });
 
-test('basic object system functions properly', function(assert) {
+QUnit.test('basic object system functions properly', function(assert) {
   var Ember = require(path.join(distPath, 'ember-runtime'));
 
   var Person = Ember.Object.extend({
